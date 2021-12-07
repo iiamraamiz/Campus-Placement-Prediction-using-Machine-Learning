@@ -1,16 +1,18 @@
 from flask import Flask, render_template, request
 import pickle
 import pandas as pd
+
 app = Flask(__name__)
-global backsStr,branches,genderName
 salary = pickle.load(open('Package.pkl', 'rb'))
 placed = pickle.load(open('Placement.pkl', 'rb'))
+
 @app.route('/',methods=['GET','POST'])
 def homePage():
     return render_template('base.html')
 
 @app.route('/output', methods=['GET', 'POST'])
 def compute():
+    global cols, salary, placed
     if request.method == 'POST':
         try:
             age = int(request.form['Age'])
