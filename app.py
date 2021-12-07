@@ -76,4 +76,4 @@ if __name__ == '__main__':
                 'Internships', 'HistoryOfBacklogs', 'Computer Science', 'Electrical',
                 'Electronics And Communication', 'Information Technology',
                 'Mechanical']
-    app.run()
+    app.run(debug=True)
