@@ -5,6 +5,10 @@ import pandas as pd
 app = Flask(__name__)
 salary = pickle.load(open('Package.pkl', 'rb'))
 placed = pickle.load(open('Placement.pkl', 'rb'))
+cols = ['Age', 'Gender', 'CGPA', 'Coding Skills', 'Communication Skills',
+                'Internships', 'HistoryOfBacklogs', 'Computer Science', 'Electrical',
+                'Electronics And Communication', 'Information Technology',
+                'Mechanical']
 
 @app.route('/',methods=['GET','POST'])
 def homePage():
@@ -72,8 +76,4 @@ def compute():
             back=backsStr)
 
 if __name__ == '__main__':
-    cols = ['Age', 'Gender', 'CGPA', 'Coding Skills', 'Communication Skills',
-                'Internships', 'HistoryOfBacklogs', 'Computer Science', 'Electrical',
-                'Electronics And Communication', 'Information Technology',
-                'Mechanical']
     app.run(debug=True)
