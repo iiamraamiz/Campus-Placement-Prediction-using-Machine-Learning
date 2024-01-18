@@ -1,1 +1,2 @@
-# CPP-WebApp
+# Campus Placement Prediction using Machine Learning
+This project utlized real-time data which was gathered from the college's placement cell, it was preprocessed by determing appropriate relationships between the varibales and various machine learning models like regression models and classiffication models were trained using python's keras and tensorflow frameworks to predict whether a student will get a job or not based on the variables determined, if a student gets placed the regression model determines what sort of package the student might get based on the performance scores given. 
